@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "5b937d45629b4a2ca6255c93b4f646c3",
+    "name": "CareTrack Administrator",
+    "email": "admin@caretrack.demo",
+    "role": "admin",
+    "passwordHash": "$2a$12$a6ZJRfzPDI0Gf2k9LGELSOw1XaDcEOkkqDoAiawXCZupnM9tNcjUK",
+    "createdAt": "2026-10-23T13:11:30.814Z",
+    "updatedAt": "2026-10-23T13:11:30.816Z"
+  },
+  {
+    "_id": "d0edd1ce64834e7bb88d281a16f1f775",
+    "name": "Jordan Nurse",
+    "email": "nurse@caretrack.demo",
+    "role": "nurse",
+    "passwordHash": "$2a$12$sRVQdb9BesFp9pGq9ayEueKAcb55Vwc/OayYlwsCmrQazE1hEZqY.",
+    "createdAt": "2026-10-23T13:11:31.125Z",
+    "updatedAt": "2026-10-23T13:11:31.126Z"
+  },
+  {
+    "_id": "de5d1f17f8b34a8287382546c42e4eb9",
+    "name": "Taylor Doctor",
+    "email": "doctor@caretrack.demo",
+    "role": "doctor",
+    "passwordHash": "$2a$12$T1KAxh9P/FLQae670SMgOuRgeJjsDCabzh6jm7.zwR7jhREBAdvB2",
+    "createdAt": "2026-10-23T13:11:31.437Z",
+    "updatedAt": "2026-10-23T13:11:31.438Z"
+  }
+]

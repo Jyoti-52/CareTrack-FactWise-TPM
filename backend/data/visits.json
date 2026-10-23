@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "8177ef602b404bec99113d2b5fdd9968",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "dateKey": "2026-10-23",
+    "visitedAt": "2026-10-23T11:00:00.000Z",
+    "diagnosis": "Viral infection; recovering",
+    "treatmentNotes": "Continue observation; recovery progressing.",
+    "temperatureReviewed": "ee9aa00636064add8c44eac1bb040b9e",
+    "recordedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "createdAt": "2026-10-23T11:00:00.000Z",
+    "updatedAt": "2026-10-23T11:00:00.000Z"
+  },
+  {
+    "_id": "9d67c0673669402dbb0033a657868e09",
+    "patient": "041c2586a7d54c84b3bbe9213b1a25e4",
+    "dateKey": "2026-10-23",
+    "visitedAt": "2026-10-23T11:00:00.000Z",
+    "diagnosis": "Persistent fever",
+    "treatmentNotes": "Clinical review completed.",
+    "temperatureReviewed": "e218ae1fb72b42919ce48de2df06d2db",
+    "recordedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "createdAt": "2026-10-23T11:00:00.000Z",
+    "updatedAt": "2026-10-23T11:00:00.000Z"
+  },
+  {
+    "_id": "639cf97955d04d6e8d65d23380bea784",
+    "patient": "466a79a80b6644cf99f534c7bcc4d2b6",
+    "dateKey": "2026-10-23",
+    "visitedAt": "2026-10-23T11:00:00.000Z",
+    "diagnosis": "Fever monitoring",
+    "treatmentNotes": "Clinical review completed.",
+    "temperatureReviewed": "0cd11205aaee47d9893d78811706fdf3",
+    "recordedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "createdAt": "2026-10-23T11:00:00.000Z",
+    "updatedAt": "2026-10-23T11:00:00.000Z"
+  },
+  {
+    "_id": "2d5518d3ed974ddcb11cc06f9b26e1db",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "dateKey": "2026-10-23",
+    "visitedAt": "2026-10-23T11:00:00.000Z",
+    "diagnosis": "Viral infection; stable",
+    "treatmentNotes": "Clinical review completed.",
+    "temperatureReviewed": "92404997d1c6422d81eebf48c6e8a2dd",
+    "recordedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "createdAt": "2026-10-23T11:00:00.000Z",
+    "updatedAt": "2026-10-23T11:00:00.000Z"
+  },
+  {
+    "_id": "7a3b0fd86cba449ba2339b18332e50c2",
+    "patient": "e9c2148de21c4fffad46a44398760157",
+    "dateKey": "2026-10-23",
+    "visitedAt": "2026-10-23T13:12:19.923Z",
+    "diagnosis": "Clinical review",
+    "treatmentNotes": "Local workflow verification",
+    "temperatureReviewed": "bdd342332672494d969d28b773551471",
+    "recordedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "createdAt": "2026-10-23T13:12:19.923Z",
+    "updatedAt": "2026-10-23T13:12:19.923Z"
+  }
+]

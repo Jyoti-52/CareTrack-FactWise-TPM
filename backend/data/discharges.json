@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "a8b49896bb30491fa88bb4e136fbbdb4",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "recommendedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "recommendedAt": "2026-10-23T12:00:00.000Z",
+    "approvedBy": null,
+    "approvedAt": null,
+    "status": "pending",
+    "feverFreeDays": [
+      "2026-10-22",
+      "2026-10-21",
+      "2026-10-20"
+    ],
+    "createdAt": "2026-10-23T12:00:00.000Z",
+    "updatedAt": "2026-10-23T12:00:00.000Z"
+  },
+  {
+    "_id": "95317b625f73412d883ce79ad3271e1c",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "recommendedBy": "de5d1f17f8b34a8287382546c42e4eb9",
+    "recommendedAt": "2026-10-23T13:15:05.061Z",
+    "approvedBy": "5b937d45629b4a2ca6255c93b4f646c3",
+    "approvedAt": "2026-10-23T13:15:05.088Z",
+    "status": "approved",
+    "feverFreeDays": [
+      "2026-10-22",
+      "2026-10-21",
+      "2026-10-20"
+    ],
+    "createdAt": "2026-10-23T13:15:05.061Z",
+    "updatedAt": "2026-10-23T13:15:05.088Z"
+  }
+]

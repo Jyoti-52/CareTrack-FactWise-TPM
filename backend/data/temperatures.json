@@ -1,0 +1,200 @@
+[
+  {
+    "_id": "652e785265c0429f8905107648341522",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "celsius": 37.099999999999994,
+    "dateKey": "2026-10-20",
+    "measuredAt": "2026-10-20T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-20T09:00:00.000Z",
+    "updatedAt": "2026-10-20T09:00:00.000Z"
+  },
+  {
+    "_id": "02064774c9c1468aa8d24bcdc4a2f769",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "celsius": 37,
+    "dateKey": "2026-10-21",
+    "measuredAt": "2026-10-21T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "_id": "df798d27e51b44c98ca5a64626f832f5",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "celsius": 36.9,
+    "dateKey": "2026-10-22",
+    "measuredAt": "2026-10-22T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-22T09:00:00.000Z",
+    "updatedAt": "2026-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "ee9aa00636064add8c44eac1bb040b9e",
+    "patient": "6919de9a3a84459fb2507e7339b87458",
+    "celsius": 36.8,
+    "dateKey": "2026-10-23",
+    "measuredAt": "2026-10-23T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-23T09:00:00.000Z",
+    "updatedAt": "2026-10-23T09:00:00.000Z"
+  },
+  {
+    "_id": "9cbb6e09db314201be8c3edbf0ae58b1",
+    "patient": "041c2586a7d54c84b3bbe9213b1a25e4",
+    "celsius": 38.2,
+    "dateKey": "2026-10-21",
+    "measuredAt": "2026-10-21T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "_id": "0bab2c773bde47de8a51ae975ec1f126",
+    "patient": "041c2586a7d54c84b3bbe9213b1a25e4",
+    "celsius": 38.4,
+    "dateKey": "2026-10-22",
+    "measuredAt": "2026-10-22T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-22T09:00:00.000Z",
+    "updatedAt": "2026-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "e218ae1fb72b42919ce48de2df06d2db",
+    "patient": "041c2586a7d54c84b3bbe9213b1a25e4",
+    "celsius": 38.1,
+    "dateKey": "2026-10-23",
+    "measuredAt": "2026-10-23T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-23T09:00:00.000Z",
+    "updatedAt": "2026-10-23T09:00:00.000Z"
+  },
+  {
+    "_id": "2321986392c44b0f864e7c7ed5846f6d",
+    "patient": "e9c2148de21c4fffad46a44398760157",
+    "celsius": 37.4,
+    "dateKey": "2026-10-21",
+    "measuredAt": "2026-10-21T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "_id": "49a447d043534f8d8b9aaf3c254d95f2",
+    "patient": "e9c2148de21c4fffad46a44398760157",
+    "celsius": 37.2,
+    "dateKey": "2026-10-22",
+    "measuredAt": "2026-10-22T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-22T09:00:00.000Z",
+    "updatedAt": "2026-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "8ab3643d78fb4c1c975aaa6fa0883264",
+    "patient": "466a79a80b6644cf99f534c7bcc4d2b6",
+    "celsius": 37.3,
+    "dateKey": "2026-10-20",
+    "measuredAt": "2026-10-20T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-20T09:00:00.000Z",
+    "updatedAt": "2026-10-20T09:00:00.000Z"
+  },
+  {
+    "_id": "6dee0960b9e546a2b5bcd3cd6f2545a8",
+    "patient": "466a79a80b6644cf99f534c7bcc4d2b6",
+    "celsius": 38.1,
+    "dateKey": "2026-10-21",
+    "measuredAt": "2026-10-21T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "_id": "1e07fcfabdf34f53bf8971b986c09520",
+    "patient": "466a79a80b6644cf99f534c7bcc4d2b6",
+    "celsius": 37,
+    "dateKey": "2026-10-22",
+    "measuredAt": "2026-10-22T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-22T09:00:00.000Z",
+    "updatedAt": "2026-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "0cd11205aaee47d9893d78811706fdf3",
+    "patient": "466a79a80b6644cf99f534c7bcc4d2b6",
+    "celsius": 36.9,
+    "dateKey": "2026-10-23",
+    "measuredAt": "2026-10-23T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-23T09:00:00.000Z",
+    "updatedAt": "2026-10-23T09:00:00.000Z"
+  },
+  {
+    "_id": "0c5d03d77a6049cfa6d12fd301a1aaf2",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "celsius": 37,
+    "dateKey": "2026-10-21",
+    "measuredAt": "2026-10-21T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-21T09:00:00.000Z",
+    "updatedAt": "2026-10-21T09:00:00.000Z"
+  },
+  {
+    "_id": "9e2e394960204ea9b9d0d334c2c8b742",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "celsius": 36.9,
+    "dateKey": "2026-10-22",
+    "measuredAt": "2026-10-22T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-22T09:00:00.000Z",
+    "updatedAt": "2026-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "92404997d1c6422d81eebf48c6e8a2dd",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "celsius": 36.8,
+    "dateKey": "2026-10-23",
+    "measuredAt": "2026-10-23T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-23T09:00:00.000Z",
+    "updatedAt": "2026-10-23T09:00:00.000Z"
+  },
+  {
+    "_id": "bdd342332672494d969d28b773551471",
+    "patient": "e9c2148de21c4fffad46a44398760157",
+    "celsius": 36.9,
+    "dateKey": "2026-10-23",
+    "measuredAt": "2026-10-23T13:12:19.897Z",
+    "notes": "Local workflow verification",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-23T13:12:19.897Z",
+    "updatedAt": "2026-10-23T13:12:19.897Z"
+  },
+  {
+    "_id": "6d8885afbdc249c8a400e9ddb591aeba",
+    "patient": "2e50970c1bc547a1ad0aab1d4db56e4d",
+    "celsius": 37.1,
+    "dateKey": "2026-10-20",
+    "measuredAt": "2026-10-20T09:00:00.000Z",
+    "notes": "",
+    "recordedBy": "d0edd1ce64834e7bb88d281a16f1f775",
+    "createdAt": "2026-10-20T09:00:00.000Z",
+    "updatedAt": "2026-10-20T09:00:00.000Z"
+  }
+]
