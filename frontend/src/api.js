@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "https://caretrack-backend.vercel.app/api";
 
 export async function api(path, options = {}) {
   const token = localStorage.getItem("caretrack-token");

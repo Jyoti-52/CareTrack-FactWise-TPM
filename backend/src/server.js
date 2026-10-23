@@ -17,7 +17,11 @@ export const app = express();
 const allowedOrigins = new Set([
   "http://localhost:5173",
   "http://127.0.0.1:5173",
-  ...(process.env.CLIENT_ORIGIN || "").split(",").map((value) => value.trim()).filter(Boolean),
+  "https://care-track-fact-wise-tpm-vstm-mjmdgtyp5.vercel.app",
+  ...(process.env.CLIENT_ORIGIN || "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean),
 ]);
 app.disable("x-powered-by");
 app.use(helmet());
