@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CareTrack
 
 CareTrack is a local assessment prototype for quarantine facility operations. It uses the existing React/Vite frontend and Express API, with persistent JSON files stored in `backend/data/`. It does not require MongoDB, Atlas, or any other external database.
@@ -98,3 +99,7 @@ This reaches the maximum weighted value of 22 with the least effort, leaving 1.7
 npm test --prefix backend
 npm run build --prefix frontend
 ```
+=======
+# CareTrack-FactWise-TPM
+CareTrack – Patient Management System
+>>>>>>> b863b5615ebaabcc70d8b53f99646175fc001222
