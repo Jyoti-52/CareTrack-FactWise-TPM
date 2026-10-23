@@ -38,14 +38,29 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-const port = Number(process.env.PORT || 5000);
 
-initializeStore().then(() => {
-  feverThresholdC();
-  app.listen(port, () => {
-    console.info(`CareTrack API listening on ${port}; JSON data: ${localDataDirectory}`);
+let storeInitialized = false;
+
+export async function initializeApp() {
+  if (!storeInitialized) {
+    await initializeStore();
+    feverThresholdC();
+    storeInitialized = true;
+  }
+
+  return app;
+}
+
+if (process.env.NODE_ENV !== "production") {
+  initializeApp().then(() => {
+    const port = Number(process.env.PORT || 5000);
+
+    app.listen(port, () => {
+      console.info(`CareTrack API listening on ${port}`);
+    });
+  }).catch((error) => {
+    console.error(`Unable to start CareTrack API: ${error.message}`);
+    process.exitCode = 1;
   });
-}).catch((error) => {
-  console.error(`Unable to start CareTrack API: ${error.message}`);
-  process.exitCode = 1;
-});
+}
+
