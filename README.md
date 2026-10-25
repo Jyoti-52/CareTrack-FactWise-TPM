@@ -1,24 +1,70 @@
-<<<<<<< HEAD
-# CareTrack
+# CareTrack – Patient Management System
 
-CareTrack is a local assessment prototype for quarantine facility operations. It uses the existing React/Vite frontend and Express API, with persistent JSON files stored in `backend/data/`. It does not require MongoDB, Atlas, or any other external database.
+CareTrack is a patient management system prototype designed for quarantine facility operations. It uses a React/Vite frontend and an Express API, with JSON files for local data storage.
 
-## Run locally
+The application supports patient registration, room management, daily temperature monitoring, doctor visits, recovery tracking, discharge recommendations, discharge approval, and reports.
 
-Requirements: Node.js 20 or newer and npm.
+The project uses local JSON storage and does not require MongoDB, MongoDB Atlas, or another external database for local development.
 
-From the project root, install the dependencies and start both apps:
+## Project Overview
+
+- **Frontend:** React, Vite
+- **Backend:** Node.js, Express
+- **Database:** Local JSON file storage
+- **Authentication:** JWT-based authentication
+- **Deployment:** Vercel
+- **Project Type:** Assessment and demonstration prototype
+
+## Run Locally
+
+### Requirements
+
+- Node.js 20 or newer
+- npm
+
+### Installation
+
+From the project root, install the dependencies:
 
 ```powershell
 npm install
 npm install --prefix backend
 npm install --prefix frontend
+```
+
+### Start the application
+
+```powershell
 npm run dev
 ```
 
-Open **http://localhost:5173**. The Express API runs at **http://localhost:5000** and its health check is **http://localhost:5000/api/health**.
+Open the frontend:
 
-The backend creates `backend/data/` and its JSON files automatically on first start. When all data files are empty, it creates demo users, 74 rooms, 8 example patients, temperature readings, doctor visits, a pending discharge recommendation, and an audit entry. It does not reseed or replace data after the JSON files contain records.
+**http://localhost:5173**
+
+The Express API runs at:
+
+**http://localhost:5000**
+
+Backend health check:
+
+**http://localhost:5000/api/health**
+
+### Local Data Initialization
+
+The backend automatically creates the `backend/data/` directory and its JSON files when the application starts.
+
+When all data files are empty, the backend initializes demo data, including:
+
+- Demo users
+- 74 rooms
+- 8 example patients
+- Temperature readings
+- Doctor visits
+- A pending discharge recommendation
+- An audit entry
+
+The backend does not reseed or replace existing data after the JSON files contain records.
 
 To check or initialize the local data files without starting the server:
 
@@ -26,9 +72,9 @@ To check or initialize the local data files without starting the server:
 npm run seed --prefix backend
 ```
 
-This command preserves existing data. It creates initial demo data only when all local data files are empty.
+This command preserves existing data and creates initial demo data only when all local data files are empty.
 
-### Demo logins
+## Demo Login Credentials
 
 | Role | Email | Password |
 |---|---|---|
@@ -36,50 +82,192 @@ This command preserves existing data. It creates initial demo data only when all
 | Nurse | `nurse@caretrack.demo` | `NurseDemo123!` |
 | Doctor | `doctor@caretrack.demo` | `DoctorDemo123!` |
 
-These are demonstration credentials. The local-only JWT fallback is not suitable for a public deployment.
+These credentials are provided for demonstration purposes.
 
-## Main workflow
+The local-only JWT fallback is not suitable for a public deployment.
 
-1. Admin registers a patient in an available room.
-2. Nurse records that patient's daily temperature (one routine reading per day).
-3. Doctor reviews the recorded temperature and documents the day's visit, diagnosis, and treatment notes.
-4. Recovery tracking counts three complete prior UTC calendar days with recorded readings below the fever threshold. Today's partial day, a missed reading, or a fever reading does not count.
-5. Doctor recommends discharge only when eligible; an admin separately approves it.
-6. Approval marks the patient discharged and releases the assigned room.
+## Main Workflow
 
-Admin can also record a patient's death. This releases the room and updates outcome reporting.
+1. **Patient Registration:** Admin registers a patient and assigns an available room.
+2. **Temperature Monitoring:** Nurse records the patient's daily temperature.
+3. **Doctor Visit:** Doctor reviews the temperature and documents the day's visit, diagnosis, and treatment notes.
+4. **Recovery Tracking:** The system tracks recovery based on recorded temperatures over complete prior UTC calendar days.
+5. **Discharge Recommendation:** Doctor recommends discharge when the patient meets the eligibility requirements.
+6. **Discharge Approval:** Admin separately reviews and approves the recommendation.
+7. **Room Release:** Approval marks the patient as discharged and releases the assigned room.
 
-## Roles and features (Q1)
+Admin can also record a patient's death. This releases the assigned room and updates outcome reporting.
 
-- **Admin:** sign in, register and view patients, assign rooms, monitor daily care and room occupancy, review and approve discharge recommendations, record a death, and view reports.
-- **Nurse:** sign in, view admitted patients and temperature history, see who is awaiting a measurement, and record one routine temperature per patient per day. Nurses cannot record doctor visits or discharge patients.
-- **Doctor:** sign in, review patient temperatures and recovery progress, record a daily visit with diagnosis and treatment notes after today's temperature is available, and recommend discharge when eligible. Doctors cannot approve discharge recommendations.
+## Roles and Features (Q1)
 
-## Application overview (Q2)
+### Admin
 
-The working local prototype contains login; role-aware dashboards; patient list, registration and details; room management; temperature entry and history; doctor visits; recovery tracking; discharge recommendation and approval; and reports. Application state and workflows are persisted in the local JSON data files. No public deployment has been created.
+- Sign in
+- Register and view patients
+- Assign rooms
+- Monitor daily care
+- Monitor room occupancy
+- Review discharge recommendations
+- Approve discharge recommendations
+- Record a patient's death
+- View reports
 
-## Business constraints, warnings, and permissions (Q3)
+### Nurse
 
-- Role permissions are enforced by Express API middleware as well as the UI.
-- Admission requires an available room and is blocked at the 74-patient capacity limit.
-- Only admitted patients can receive routine temperatures or visits. Temperatures must be between 30°C and 45°C.
-- A unique patient/day check prevents duplicate routine temperature records. A visit requires that same day's temperature and is limited to one visit per patient per day.
-- Three **complete prior UTC calendar days**, each with a recorded temperature below the fever threshold, are required for discharge eligibility. A missing measurement or a fever reading resets the consecutive streak.
-- Only doctors can recommend eligible discharges. Only admins can approve. Approval rechecks eligibility and room ownership. An admin account cannot approve a recommendation created by that same account.
-- Discharge and death release the room. Nurses cannot discharge patients.
-- Success rate is `discharged / (discharged + deceased)`; mortality rate is `deceased / (discharged + deceased)`. Active patients are excluded. Empty outcome history is shown as `—`.
-- Failed validations, duplicates, authorization errors, and ineligible workflow actions return explicit API errors and visible UI messages. Actions are recorded in the audit log.
+- Sign in
+- View admitted patients
+- View temperature history
+- Identify patients awaiting temperature measurements
+- Record one routine temperature per patient per day
 
-### Prototype assumption
+Nurses cannot record doctor visits or discharge patients.
 
-The fever threshold defaults to **38°C**, configurable through the optional `FEVER_THRESHOLD_C` environment variable. This is a prototype assumption, not medical guidance. Day boundaries use UTC. Local JSON files are intended for a single-user demo and are not a production database.
+### Doctor
 
-## Sprint planning answer (Q4)
+- Sign in
+- Review patient temperatures
+- Review recovery progress
+- Record daily visits
+- Document diagnosis and treatment notes
+- Recommend discharge when eligible
 
-Velocity is 25 points, and 15 are already committed, so 10 points remain. Given High = 6 relative value, Medium = 3, and Low = 1, the following is the maximum-value combination with the least effort:
+Doctors cannot approve discharge recommendations.
 
-| Option | Priority | Effort | Relative value |
+## Application Overview (Q2)
+
+The CareTrack prototype includes the following modules:
+
+- Login and authentication
+- Role-aware dashboards
+- Patient list
+- Patient registration
+- Patient details
+- Room management
+- Temperature entry
+- Temperature history
+- Doctor visits
+- Recovery tracking
+- Discharge recommendations
+- Discharge approval
+- Reports
+
+Application state and workflows are persisted in local JSON data files.
+
+The frontend and backend are deployed on Vercel for assessment and demonstration.
+
+The application uses local JSON file storage. Data persistence in the deployed environment is not guaranteed, so the deployment is intended for demonstration rather than production use.
+
+## Business Constraints, Warnings, and Permissions (Q3)
+
+### Role-Based Permissions
+
+- Role permissions are enforced through Express API middleware as well as the frontend UI.
+- Admin, Nurse, and Doctor have different permissions.
+- Nurses cannot record doctor visits or discharge patients.
+- Doctors cannot approve discharge recommendations.
+- Only Admin can approve discharge recommendations.
+
+### Patient Admission
+
+- Admission requires an available room.
+- Admission is blocked when the 74-patient capacity limit is reached.
+- Only admitted patients can receive routine temperature readings or doctor visits.
+
+### Temperature Monitoring
+
+- Temperature readings must be between 30°C and 45°C.
+- A unique patient/day check prevents duplicate routine temperature records.
+- Routine temperature recording is limited to one reading per patient per day.
+
+### Doctor Visits
+
+- A doctor visit requires the patient's temperature to be recorded for that day.
+- A patient can have only one doctor visit per day.
+- Doctors document diagnosis and treatment notes during visits.
+
+### Recovery Tracking
+
+- Discharge eligibility requires three complete prior UTC calendar days with recorded temperatures below the fever threshold.
+- Today's partial day does not count.
+- A missed measurement does not count.
+- A fever reading resets the consecutive recovery streak.
+
+### Discharge Approval
+
+- Only doctors can recommend eligible discharges.
+- Only admins can approve discharge recommendations.
+- Approval rechecks eligibility and room ownership.
+- An admin account cannot approve a recommendation created by that same account.
+
+### Room Management
+
+- Discharge releases the assigned room.
+- Recording a patient's death releases the assigned room.
+- Nurses cannot discharge patients.
+
+### Reports
+
+Success rate:
+
+`discharged / (discharged + deceased)`
+
+Mortality rate:
+
+`deceased / (discharged + deceased)`
+
+Active patients are excluded from outcome calculations.
+
+When there is no outcome history, the report displays `—`.
+
+### Validation and Audit
+
+- Failed validations return explicit API errors.
+- Duplicate records are rejected.
+- Authorization errors are returned for unauthorized actions.
+- Ineligible workflow actions return visible UI messages.
+- Actions are recorded in the audit log.
+
+## Prototype Assumptions
+
+### Fever Threshold
+
+The fever threshold defaults to **38°C**.
+
+It can be configured through the optional environment variable:
+
+```text
+FEVER_THRESHOLD_C
+```
+
+This threshold is a prototype assumption and is not medical guidance.
+
+### Date Handling
+
+Day boundaries use UTC.
+
+### Storage
+
+Local JSON files are intended for a single-user demonstration.
+
+They are not a production database.
+
+## Sprint Planning Answer (Q4)
+
+Velocity is 25 points, and 15 points are already committed.
+
+Remaining capacity:
+
+**25 − 15 = 10 points**
+
+Given:
+
+- High priority = 6 relative value
+- Medium priority = 3 relative value
+- Low priority = 1 relative value
+
+The selected combination is:
+
+| Option | Priority | Effort | Relative Value |
 |---|---|---:|---:|
 | A | High | 1 | 6 |
 | B | High | 3 | 6 |
@@ -89,17 +277,54 @@ Velocity is 25 points, and 15 are already committed, so 10 points remain. Given 
 | H | Low | 0.5 | 1 |
 | I | Low | 0.3 | 1 |
 | J | Low | 0.1 | 1 |
-| **Total** |  | **8.3 / 10** | **22** |
+| **Total** | | **8.3 / 10** | **22** |
 
-This reaches the maximum weighted value of 22 with the least effort, leaving 1.7 points available.
+This combination reaches the maximum weighted value of 22 with the least effort, leaving 1.7 points available.
+
+## Deployment
+
+### Frontend
+
+The frontend is deployed on Vercel:
+
+https://care-track-fact-wise-tpm-vstm.vercel.app
+
+### Backend API
+
+The backend is deployed on Vercel:
+
+https://caretrack-backend.vercel.app/api
+
+### Backend Health Check
+
+https://caretrack-backend.vercel.app/api/health
+
+The application is deployed for assessment and demonstration purposes.
+
+The backend uses local JSON storage, and persistence in the deployed environment is not guaranteed.
 
 ## Validation
 
+Run backend tests:
+
 ```powershell
 npm test --prefix backend
+```
+
+Build the frontend:
+
+```powershell
 npm run build --prefix frontend
 ```
-=======
-# CareTrack-FactWise-TPM
-CareTrack – Patient Management System
->>>>>>> b863b5615ebaabcc70d8b53f99646175fc001222
+
+## Project Repository
+
+GitHub:
+
+https://github.com/Jyoti-52/CareTrack-FactWise-TPM
+
+## Disclaimer
+
+CareTrack is an assessment prototype for demonstration purposes.
+
+The recovery tracking rules, fever threshold, and discharge workflow are application assumptions. They are not intended to replace professional medical judgment or clinical guidelines.
